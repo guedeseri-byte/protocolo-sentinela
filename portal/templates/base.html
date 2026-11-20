@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Protocolo Sentinela{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/png" href="/static/img/logo.png">
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="header-logo">
+                <img src="/static/img/logo.png" alt="Protocolo Sentinela" class="logo-img">
+                <div class="header-text">
+                    <h1 class="header-title">PROTOCOLO<br><span class="header-accent">SENTINELA</span></h1>
+                </div>
+            </a>
+            <nav class="header-nav">
+                <a href="/">Início</a>
+                <a href="/biblioteca">Biblioteca</a>
+                <a href="/ia">IA Offline</a>
+                <a href="/api/status">Status</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p><strong>Protocolo Sentinela</strong> — Preparação. Conhecimento. Autonomia.</p>
+            <p class="footer-disclaimer">
+                Não substitui serviços de emergência. Em situações reais, ligue SAMU (192) ou Bombeiros (193).
+            </p>
+            <p class="footer-version">v{{ version }} · Offline-first · Código aberto</p>
+        </div>
+    </footer>
+</body>
+</html>

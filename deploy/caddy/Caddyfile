@@ -1,0 +1,45 @@
+{
+	auto_https off
+}
+
+:80 {
+	# Portal principal
+	handle / {
+		reverse_proxy portal:8000
+	}
+	handle /static/* {
+		reverse_proxy portal:8000
+	}
+	handle /api/* {
+		reverse_proxy portal:8000
+	}
+
+	# Kiwix — Biblioteca offline
+	handle /biblioteca/* {
+		uri strip_prefix /biblioteca
+		reverse_proxy kiwix:8080
+	}
+
+	# Ollama — API de IA (quando ativo)
+	handle /ollama/* {
+		uri strip_prefix /ollama
+		reverse_proxy ollama:11434
+	}
+
+	# Open WebUI — Interface de chat com IA (quando ativo)
+	handle /ia/* {
+		uri strip_prefix /ia
+		reverse_proxy open-webui:8080
+	}
+
+	# Kolibri — Educação (quando ativo)
+	handle /educacao/* {
+		uri strip_prefix /educacao
+		reverse_proxy kolibri:8080
+	}
+
+	# Fallback para o portal
+	handle {
+		reverse_proxy portal:8000
+	}
+}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ modulo.nome }} — Protocolo Sentinela{% endblock %}
+
+{% block content %}
+<section class="modulo-header" style="--mod-cor: {{ modulo.cor }}">
+    <div class="modulo-header-inner">
+        <span class="modulo-header-icone">{{ modulo.icone }}</span>
+        <div>
+            <h2 class="modulo-header-titulo">{{ modulo.nome | upper }}</h2>
+            <p class="modulo-header-desc">{{ modulo.desc }}</p>
+        </div>
+    </div>
+</section>
+
+<section class="modulo-content">
+    <div class="modulo-placeholder">
+        <p>Conteúdo do módulo <strong>{{ modulo.nome }}</strong> será adicionado conforme o roadmap de desenvolvimento.</p>
+        <p>Este módulo faz parte da estrutura do Protocolo Sentinela e será preenchido com protocolos, ferramentas e conteúdo curado de fontes brasileiras confiáveis.</p>
+        <a href="/" class="btn-voltar">← Voltar ao início</a>
+    </div>
+</section>
+{% endblock %}

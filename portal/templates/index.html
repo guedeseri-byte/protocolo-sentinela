@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Protocolo Sentinela — Início{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-inner">
+        <img src="/static/img/logo.png" alt="Protocolo Sentinela" class="hero-logo">
+        <h2 class="hero-title">PROTOCOLO<br><span class="hero-accent">SENTINELA</span></h2>
+        <p class="hero-tagline">Preparação. Conhecimento. Autonomia.</p>
+        <p class="hero-desc">
+            Sistema offline de preparação, sobrevivência e continuidade operacional.
+            Conhecimento e ferramentas que permanecem disponíveis quando a conectividade falha.
+        </p>
+    </div>
+</section>
+
+<section class="status-bar">
+    <div class="status-inner">
+        {% for key, svc in servicos.items() %}
+        <div class="status-item {{ 'online' if svc.online else 'offline' }}">
+            <span class="status-dot"></span>
+            <span>{{ svc.nome }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="modulos">
+    <h2 class="section-title">MÓDULOS</h2>
+    <div class="modulos-grid">
+        {% for mod in modulos %}
+        <a href="/modulo/{{ mod.id }}" class="modulo-card" style="--mod-cor: {{ mod.cor }}">
+            <span class="modulo-icone">{{ mod.icone }}</span>
+            <h3 class="modulo-nome">{{ mod.nome }}</h3>
+            <p class="modulo-desc">{{ mod.desc }}</p>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="acesso-rapido">
+    <h2 class="section-title">ACESSO RÁPIDO</h2>
+    <div class="acesso-grid">
+        <a href="/biblioteca" class="acesso-btn">
+            <span class="acesso-icone">📚</span>
+            <span>Biblioteca Offline</span>
+            <span class="acesso-sub">Wikipedia, livros, manuais</span>
+        </a>
+        <a href="/ia" class="acesso-btn">
+            <span class="acesso-icone">🤖</span>
+            <span>Assistente IA</span>
+            <span class="acesso-sub">Consulta com fontes locais</span>
+        </a>
+        <a href="/educacao" class="acesso-btn">
+            <span class="acesso-icone">🎓</span>
+            <span>Educação</span>
+            <span class="acesso-sub">Khan Academy, cursos offline</span>
+        </a>
+        <a href="/navegacao" class="acesso-btn">
+            <span class="acesso-icone">🗺️</span>
+            <span>Mapas</span>
+            <span class="acesso-sub">OpenStreetMap + IBGE</span>
+        </a>
+    </div>
+</section>
+{% endblock %}
