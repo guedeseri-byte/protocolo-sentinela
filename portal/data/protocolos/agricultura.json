@@ -1,0 +1,38 @@
+[
+  {
+    "id": "AGRI-001",
+    "categoria": "AGRI",
+    "titulo": "Horta de Emergência em Pequenos Espaços",
+    "resumo": "Cultivo rápido de alimentos em varandas, quintais e espaços urbanos limitados.",
+    "nivel": 1,
+    "prioridade": "alta",
+    "tags": ["horta", "cultivo", "urbano", "alimentos"],
+    "fonte": "Embrapa Hortaliças",
+    "conteudo": {
+      "objetivo": "Produzir alimentos frescos em 30-60 dias usando espaços pequenos e materiais reciclados.",
+      "materiais": [
+        "Recipientes: garrafas PET, baldes, caixotes, pneus",
+        "Terra vegetal ou substrato",
+        "Composto orgânico (pode ser feito em casa)",
+        "Sementes: alface, rúcula, cebolinha, coentro, rabanete",
+        "Água para irrigação"
+      ],
+      "passos": [
+        "Escolha local com mínimo 4-6 horas de sol direto por dia.",
+        "CULTIVOS RÁPIDOS (30 dias): rabanete, rúcula, agrião, mostarda.",
+        "CULTIVOS MÉDIOS (45-60 dias): alface, coentro, cebolinha, salsa.",
+        "CULTIVOS PRODUTIVOS (60-90 dias): tomate cereja, pimentão, abobrinha.",
+        "Fure o fundo dos recipientes para drenagem. Coloque pedriscos antes da terra.",
+        "Use mistura: 2 partes terra + 1 parte composto orgânico + 1 parte areia.",
+        "Irrigue pela manhã ou fim da tarde. Solo úmido, nunca encharcado.",
+        "Compostagem caseira: restos de frutas, verduras, cascas de ovo e borra de café.",
+        "Consórcio: plante alface com cebolinha — uma protege a outra de pragas."
+      ],
+      "alertas": [
+        "Nunca use terra de terreno contaminado (postos de gasolina, lixões).",
+        "Pneus para horta: forre com lona plástica para evitar contaminação.",
+        "Guarde sementes de cada colheita — garante continuidade do cultivo."
+      ]
+    }
+  }
+]

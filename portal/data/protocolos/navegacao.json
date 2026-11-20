@@ -1,0 +1,29 @@
+[
+  {
+    "id": "NAVE-001",
+    "categoria": "NAVE",
+    "titulo": "Orientação sem GPS — Bússola e Referências Naturais",
+    "resumo": "Técnicas de orientação usando bússola, sol, estrelas e referências naturais do hemisfério sul.",
+    "nivel": 2,
+    "prioridade": "alta",
+    "tags": ["bússola", "orientação", "estrelas", "cruzeiro do sul"],
+    "fonte": "Exército Brasileiro / Escoteiros do Brasil",
+    "conteudo": {
+      "objetivo": "Determinar direção e navegar sem dispositivos eletrônicos.",
+      "passos": [
+        "BÚSSOLA: a agulha vermelha aponta para o norte magnético. Alinhe com o mapa.",
+        "PELO SOL: no Brasil (hemisfério sul), o sol nasce a leste e se põe a oeste, passando pelo norte ao meio-dia.",
+        "Espete um graveto vertical no chão. Marque a ponta da sombra. Espere 15min, marque novamente. A linha entre os dois pontos indica leste-oeste.",
+        "PELO CRUZEIRO DO SUL (noite): prolongue o eixo maior da cruz 4,5 vezes para baixo. O ponto imaginário no horizonte indica o sul.",
+        "PELA VEGETAÇÃO: musgos crescem mais no lado sul (menos sol) no hemisfério sul.",
+        "PELA LUA: lua crescente com 'chifres' para a esquerda = leste. Para a direita = oeste.",
+        "Sempre siga trilhas e cursos d'água quando estiver perdido — levam a civilização."
+      ],
+      "alertas": [
+        "Bússola pode ser afetada por objetos metálicos e eletrônicos — afaste pelo menos 1 metro.",
+        "Declinação magnética no Brasil varia de -17° a -23° — ajuste conforme sua região.",
+        "Se perdido: PARE. Pense. Observe. Planeje. Não entre em pânico."
+      ]
+    }
+  }
+]

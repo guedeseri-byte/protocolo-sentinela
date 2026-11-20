@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Central de Protocolos — Protocolo Sentinela{% endblock %}
+
+{% block content %}
+<section class="central-header">
+    <div class="central-inner">
+        <h1 class="section-title">Central de Protocolos</h1>
+        <p class="central-desc">{{ total }} protocolos curados de fontes brasileiras confiáveis</p>
+        <a href="/busca" class="busca-link">🔍 Buscar protocolos</a>
+    </div>
+</section>
+
+<section class="central-criticos">
+    <h2 class="section-title">🔴 Protocolos Críticos</h2>
+    <p class="central-sub">Ações imediatas que podem salvar vidas — conheça ANTES da emergência</p>
+    <div class="central-grid">
+        {% for p in criticos %}
+        <a href="/protocolo/{{ p.id }}" class="central-card critico">
+            {% set cat = categorias.get(p.categoria, {}) %}
+            <span class="central-card-cat">{{ cat.get('icone', '') }} {{ cat.get('nome', '') }}</span>
+            <h3>{{ p.titulo }}</h3>
+            <p>{{ p.resumo }}</p>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="central-categorias">
+    <h2 class="section-title">Por Módulo</h2>
+    <div class="central-grid">
+        {% for key, cat in categorias.items() %}
+        <a href="/busca?categoria={{ key }}" class="central-cat-card" style="--mod-cor: {{ cat.cor }}">
+            <span class="central-cat-icone">{{ cat.icone }}</span>
+            <span class="central-cat-nome">{{ cat.nome }}</span>
+            <span class="central-cat-count">{{ contagem.get(key, 0) }} protocolo{{ 's' if contagem.get(key, 0) != 1 else '' }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="central-niveis">
+    <h2 class="section-title">Por Nível de Conhecimento</h2>
+    <div class="central-grid">
+        {% for key, niv in niveis.items() %}
+        <a href="/busca?nivel={{ key }}" class="central-nivel-card" style="--nivel-cor: {{ niv.cor }}">
+            <span class="central-nivel-num">Nível {{ key }}</span>
+            <span class="central-nivel-nome">{{ niv.nome }}</span>
+            <span class="central-nivel-desc">{{ niv.desc }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="central-emergencia">
+    <a href="/emergencia" class="btn-emergencia-grande">🚨 MODO DE EMERGÊNCIA</a>
+    <p class="central-emergencia-sub">Interface simplificada com apenas protocolos críticos</p>
+</section>
+{% endblock %}

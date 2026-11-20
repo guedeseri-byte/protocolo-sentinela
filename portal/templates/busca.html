@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Busca — Protocolo Sentinela{% endblock %}
+
+{% block content %}
+<section class="busca-header">
+    <div class="busca-inner">
+        <h1 class="section-title">Buscar Protocolos</h1>
+        <form class="busca-form" method="get" action="/busca">
+            <input type="text" name="q" value="{{ query }}" placeholder="Digite o que procura..." class="busca-input" autofocus>
+            <select name="categoria" class="busca-select">
+                <option value="">Todas categorias</option>
+                {% for key, cat in categorias.items() %}
+                <option value="{{ key }}" {% if key == categoria_filtro %}selected{% endif %}>
+                    {{ cat.icone }} {{ cat.nome }}
+                </option>
+                {% endfor %}
+            </select>
+            <select name="nivel" class="busca-select">
+                <option value="">Todos níveis</option>
+                {% for key, niv in niveis.items() %}
+                <option value="{{ key }}" {% if key == nivel_filtro %}selected{% endif %}>
+                    {{ niv.nome }}
+                </option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="busca-btn">Buscar</button>
+        </form>
+    </div>
+</section>
+
+<section class="busca-resultados">
+    <p class="busca-contagem">{{ total }} protocolo{{ 's' if total != 1 else '' }} encontrado{{ 's' if total != 1 else '' }}</p>
+
+    {% for p in resultados %}
+    <a href="/protocolo/{{ p.id }}" class="resultado-card">
+        <div class="resultado-meta">
+            <span class="resultado-id">{{ p.id }}</span>
+            {% set cat = categorias.get(p.categoria, {}) %}
+            <span class="resultado-cat">{{ cat.get('icone', '') }} {{ cat.get('nome', '') }}</span>
+            {% set niv = niveis.get(p.nivel, {}) %}
+            <span class="resultado-nivel" style="background: {{ niv.get('cor', '#666') }}">{{ niv.get('nome', '') }}</span>
+        </div>
+        <h3 class="resultado-titulo">{{ p.titulo }}</h3>
+        <p class="resultado-resumo">{{ p.resumo }}</p>
+        {% if p.tags %}
+        <div class="resultado-tags">
+            {% for tag in p.tags[:5] %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </a>
+    {% endfor %}
+
+    {% if total == 0 and query %}
+    <div class="busca-vazio">
+        <p>Nenhum protocolo encontrado para "<strong>{{ query }}</strong>".</p>
+        <p>Tente termos mais gerais ou <a href="/protocolos">navegue pela Central de Protocolos</a>.</p>
+    </div>
+    {% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "LOGI-001",
+    "categoria": "LOGI",
+    "titulo": "Inventário e Controle de Suprimentos",
+    "resumo": "Sistema de controle de estoque para gerenciar recursos em situação de autonomia prolongada.",
+    "nivel": 1,
+    "prioridade": "alta",
+    "tags": ["inventário", "estoque", "controle", "suprimentos"],
+    "fonte": "Logística Militar / SENAC",
+    "conteudo": {
+      "objetivo": "Manter controle preciso de todos os recursos disponíveis para planejar consumo e reposição.",
+      "passos": [
+        "Liste TODOS os suprimentos por categoria: água, alimentos, medicamentos, combustível, materiais.",
+        "Registre para cada item: quantidade, unidade, validade, localização, consumo diário estimado.",
+        "Calcule autonomia: quantidade ÷ consumo diário = dias restantes.",
+        "Priorize: água > medicamentos essenciais > alimentos > energia > materiais.",
+        "Implemente racionamento progressivo: reduza consumo antes que atinja nível crítico.",
+        "Nível de alerta: quando autonomia < 7 dias para itens críticos, inicie busca por reposição.",
+        "Faça inventário semanal completo. Inventário diário para itens críticos.",
+        "Use caderno físico — não dependa de eletrônicos para registros essenciais."
+      ],
+      "alertas": [
+        "Subestimar consumo é o erro mais comum — meça os primeiros dias e ajuste.",
+        "Inclua necessidades de animais de estimação no cálculo.",
+        "Registre também ferramentas e equipamentos — são recursos tão importantes quanto alimentos."
+      ]
+    }
+  }
+]

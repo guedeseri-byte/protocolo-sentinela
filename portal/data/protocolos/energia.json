@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ENER-001",
+    "categoria": "ENER",
+    "titulo": "Energia Solar Básica — Sistema Off-Grid Mínimo",
+    "resumo": "Montagem de sistema solar fotovoltaico mínimo para manter comunicações e iluminação.",
+    "nivel": 2,
+    "prioridade": "alta",
+    "tags": ["solar", "fotovoltaico", "bateria", "off-grid"],
+    "fonte": "CRESESB / CEPEL",
+    "conteudo": {
+      "objetivo": "Manter iluminação LED, carregamento de celular e rádio funcionando sem rede elétrica.",
+      "materiais": [
+        "Painel solar 100W (12V)",
+        "Controlador de carga 10A",
+        "Bateria estacionária 12V 55Ah",
+        "Inversor 300W (12V para 110/220V)",
+        "Cabos 4mm² e conectores MC4",
+        "Fusíveis de proteção"
+      ],
+      "passos": [
+        "Posicione o painel solar voltado para o NORTE (hemisfério sul) com inclinação igual à latitude local.",
+        "Conecte o painel ao controlador de carga (atenção à polaridade: + e -).",
+        "Conecte a bateria ao controlador (SEMPRE conecte a bateria ANTES do painel).",
+        "Conecte o inversor à bateria para alimentar equipamentos 110/220V.",
+        "Cargas diretas em 12V (LED, USB) podem sair direto do controlador — mais eficiente.",
+        "Capacidade estimada: celular (10Wh) = ~25 cargas completas por dia de sol.",
+        "Monitore a tensão da bateria: abaixo de 11,5V = bateria descarregada, desconecte cargas."
+      ],
+      "alertas": [
+        "NUNCA conecte painel diretamente à bateria sem controlador — risco de explosão.",
+        "Baterias de carro NÃO são ideais — use estacionárias (ciclo profundo).",
+        "Mantenha baterias ventiladas — liberam gases inflamáveis durante carga."
+      ]
+    }
+  }
+]

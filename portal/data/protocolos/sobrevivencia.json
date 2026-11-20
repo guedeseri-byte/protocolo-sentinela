@@ -1,0 +1,64 @@
+[
+  {
+    "id": "SOBR-001",
+    "categoria": "SOBR",
+    "titulo": "Abrigo de Emergência — Construção Improvisada",
+    "resumo": "Técnicas para construir abrigo temporário com materiais disponíveis no ambiente.",
+    "nivel": 2,
+    "prioridade": "alta",
+    "tags": ["abrigo", "improviso", "proteção", "intempérie"],
+    "fonte": "Manual de Campanha do Exército Brasileiro",
+    "conteudo": {
+      "objetivo": "Proteger-se de chuva, vento, frio e sol quando não há estrutura disponível.",
+      "passos": [
+        "Prioridade: proteção contra hipotermia (frio/chuva) é mais urgente que fome.",
+        "Escolha local elevado, protegido do vento, longe de leitos de rio e encostas instáveis.",
+        "OPÇÃO 1 — Lona/plástico: estenda entre duas árvores inclinado a 45° para escoar chuva.",
+        "OPÇÃO 2 — Galhos: apoie galhos longos em tronco caído formando parede. Cubra com folhas.",
+        "OPÇÃO 3 — Veículo: se disponível, use o carro como abrigo. Mantenha frestas para ventilação.",
+        "Isole o chão: folhas secas, papelão ou galhos impedem perda de calor pelo solo.",
+        "Faça o abrigo pequeno — menor = mais fácil de aquecer com calor corporal.",
+        "Sinalize sua posição: tecido colorido visível de cima para equipes de resgate."
+      ],
+      "alertas": [
+        "Nunca durma diretamente no chão frio — a perda de calor por condução é rápida.",
+        "Evite vales e baixadas: acumulam água e ar frio.",
+        "Em mata fechada, cuidado com animais peçonhentos ao coletar material."
+      ]
+    }
+  },
+  {
+    "id": "SOBR-002",
+    "categoria": "SOBR",
+    "titulo": "Fogueira de Emergência — Acender Fogo com Segurança",
+    "resumo": "Métodos para acender e manter fogo para aquecimento, sinalização e cozimento.",
+    "nivel": 2,
+    "prioridade": "alta",
+    "tags": ["fogo", "fogueira", "aquecimento", "sinalização"],
+    "fonte": "Manual de Sobrevivência — EB / Escoteiros do Brasil",
+    "conteudo": {
+      "objetivo": "Acender fogo de forma segura para aquecimento, purificação de água, preparo de alimentos e sinalização.",
+      "materiais": [
+        "Fósforos ou isqueiro (prioridade)",
+        "Lente de óculos ou lupa (método solar)",
+        "Palha de aço + pilha (método elétrico)",
+        "Material inflamável: papel, algodão, casca seca, resina de pinheiro"
+      ],
+      "passos": [
+        "Escolha local protegido do vento, longe de vegetação seca e galhos baixos.",
+        "Limpe o chão: retire folhas secas num raio de 2 metros.",
+        "Monte as camadas: material fino (isca) → gravetos finos → galhos médios → lenha.",
+        "Acenda pela base, no material mais fino. Sopre suavemente para alimentar.",
+        "Adicione combustível gradualmente — nunca afogue o fogo com lenha grossa de início.",
+        "Para SINALIZAÇÃO: adicione folhas verdes ou plástico (fumaça densa e visível).",
+        "Para COZINHAR: espere formar brasas. Brasas cozinham melhor que chamas.",
+        "APAGAR: despeje água, mexa as cinzas, despeje mais água. Teste com as costas da mão."
+      ],
+      "alertas": [
+        "Nunca deixe fogo sem vigilância — incêndios florestais destroem vidas.",
+        "Em períodos de seca, verifique se há proibição de queimadas na região.",
+        "Monóxido de carbono mata: NUNCA faça fogo em ambiente fechado."
+      ]
+    }
+  }
+]

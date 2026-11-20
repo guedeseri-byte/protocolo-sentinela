@@ -1,0 +1,30 @@
+[
+  {
+    "id": "SEGU-001",
+    "categoria": "SEGU",
+    "titulo": "Segurança Residencial em Crise",
+    "resumo": "Medidas práticas para proteger residência e família durante períodos de instabilidade.",
+    "nivel": 1,
+    "prioridade": "alta",
+    "tags": ["casa", "proteção", "segurança", "crise"],
+    "fonte": "Polícia Militar / Manual de Defesa Pessoal",
+    "conteudo": {
+      "objetivo": "Reduzir vulnerabilidades da residência e manter a segurança familiar durante períodos de crise prolongada.",
+      "passos": [
+        "Reforce portas e janelas: instale trancas auxiliares, barras de segurança.",
+        "Iluminação externa: mantenha áreas de acesso bem iluminadas (solar é ideal para corte de energia).",
+        "Conheça seus vizinhos: rede de vizinhança é a segurança comunitária mais eficaz.",
+        "Mantenha perfil discreto: não exiba estoques, equipamentos ou recursos.",
+        "Estabeleça rotina de vigilância: reveze com família/vizinhos em períodos críticos.",
+        "Mantenha comunicação ativa com vizinhança (rádios FRS, apitos codificados).",
+        "Tenha cão de alerta (não precisa ser grande — audição é o que importa).",
+        "Documente seriais de equipamentos e fotos de bens para seguro."
+      ],
+      "alertas": [
+        "Armas de fogo requerem registro e treinamento adequado — mais perigosas sem preparo.",
+        "Em saques: tranque-se, não confronte, chame autoridades.",
+        "A melhor segurança é comunidade organizada, não isolamento."
+      ]
+    }
+  }
+]

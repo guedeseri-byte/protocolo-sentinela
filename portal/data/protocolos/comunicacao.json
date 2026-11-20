@@ -1,0 +1,31 @@
+[
+  {
+    "id": "COMU-001",
+    "categoria": "COMU",
+    "titulo": "Comunicação de Emergência sem Internet",
+    "resumo": "Métodos alternativos de comunicação quando redes celulares e internet estão indisponíveis.",
+    "nivel": 1,
+    "prioridade": "critica",
+    "tags": ["rádio", "comunicação", "emergência", "sem internet"],
+    "fonte": "ANATEL / Defesa Civil",
+    "conteudo": {
+      "objetivo": "Manter capacidade de comunicação e receber informações oficiais sem internet ou rede celular.",
+      "passos": [
+        "RÁDIO AM/FM: principal fonte de informação em desastres. Mantenha rádio a pilha/manivela sempre pronto.",
+        "Sintonize rádios locais e Rádio Nacional para boletins da Defesa Civil.",
+        "SMS funciona com sinal mais fraco que ligações — prefira mensagens de texto.",
+        "RÁDIO FRS/GMRS (walk-talk): alcance 1-5km urbano, 5-15km rural. Não precisa de licença (FRS).",
+        "Canal de emergência FRS: canal 1 (462.5625 MHz). Monitore periodicamente.",
+        "SINAIS VISUAIS: espelho de sinalização (alcance 15km), fogueira com fumaça (folhas verdes).",
+        "SINAIS SONOROS: 3 apitos = socorro (padrão internacional). Repita a cada minuto.",
+        "Pano colorido (laranja/vermelho) no alto de estrutura = pedido de resgate.",
+        "Se tiver celular com bateria: modo avião economiza. Ligue apenas para chamar socorro."
+      ],
+      "alertas": [
+        "Rádio amador (radioamador) requer licença da ANATEL — mas em EMERGÊNCIA qualquer pessoa pode usar a faixa para pedir socorro.",
+        "Frequência de emergência amador: 7.060 kHz (HF) ou 146.520 MHz (VHF).",
+        "Mantenha pilhas extras para o rádio — são essenciais."
+      ]
+    }
+  }
+]

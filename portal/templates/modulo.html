@@ -14,10 +14,42 @@
 </section>
 
 <section class="modulo-content">
+    {% if protocolos %}
+    <h3 class="section-title">{{ protocolos|length }} Protocolo{{ 's' if protocolos|length != 1 else '' }}</h3>
+    <div class="proto-grid">
+        {% for p in protocolos %}
+        <a href="/protocolo/{{ p.id }}" class="proto-card" style="--mod-cor: {{ modulo.cor }}">
+            <div class="proto-card-top">
+                <span class="proto-card-id">{{ p.id }}</span>
+                {% set prio = prioridades.get(p.prioridade, {}) %}
+                <span class="proto-card-prio">{{ prio.get('icone', '') }} {{ prio.get('nome', '') }}</span>
+            </div>
+            <h4 class="proto-card-titulo">{{ p.titulo }}</h4>
+            <p class="proto-card-resumo">{{ p.resumo }}</p>
+            <div class="proto-card-bottom">
+                {% set niv = niveis.get(p.nivel, {}) %}
+                <span class="proto-card-nivel" style="background: {{ niv.get('cor', '#666') }}">{{ niv.get('nome', '') }}</span>
+                {% if p.tags %}
+                <span class="proto-card-tags">
+                    {% for tag in p.tags[:3] %}
+                    <span class="tag-sm">{{ tag }}</span>
+                    {% endfor %}
+                </span>
+                {% endif %}
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
     <div class="modulo-placeholder">
-        <p>Conteúdo do módulo <strong>{{ modulo.nome }}</strong> será adicionado conforme o roadmap de desenvolvimento.</p>
-        <p>Este módulo faz parte da estrutura do Protocolo Sentinela e será preenchido com protocolos, ferramentas e conteúdo curado de fontes brasileiras confiáveis.</p>
+        <p>Protocolos do módulo <strong>{{ modulo.nome }}</strong> serão adicionados conforme o roadmap.</p>
+        <p>Contribua com conteúdo em: <a href="/protocolos">Central de Protocolos</a></p>
+    </div>
+    {% endif %}
+
+    <div class="proto-nav">
         <a href="/" class="btn-voltar">← Voltar ao início</a>
+        <a href="/protocolos" class="btn-voltar">Central de Protocolos</a>
     </div>
 </section>
 {% endblock %}

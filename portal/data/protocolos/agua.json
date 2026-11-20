@@ -1,0 +1,100 @@
+[
+  {
+    "id": "AGUA-001",
+    "categoria": "AGUA",
+    "titulo": "Purificação de Água por Fervura e Cloro",
+    "resumo": "Métodos comprovados para tornar água segura para consumo em situações de emergência.",
+    "nivel": 1,
+    "prioridade": "critica",
+    "tags": ["purificação", "fervura", "cloro", "potável"],
+    "fonte": "Ministério da Saúde / FUNASA",
+    "conteudo": {
+      "objetivo": "Eliminar patógenos da água usando métodos acessíveis em situação de emergência.",
+      "passos": [
+        "FERVURA: Filtre a água com pano limpo para remover partículas visíveis.",
+        "Leve ao fogo e aguarde fervura completa (bolhas grandes). Mantenha fervendo por 1 minuto (3 minutos acima de 2.000m de altitude).",
+        "Deixe esfriar naturalmente em recipiente limpo e tampado.",
+        "CLORAÇÃO: Use hipoclorito de sódio 2,5% (água sanitária SEM perfume/alvejante).",
+        "Dose: 2 gotas por litro de água. Para água turva: 4 gotas por litro.",
+        "Misture bem e aguarde 30 minutos antes de consumir.",
+        "A água tratada deve ter leve cheiro de cloro — isso indica que está segura.",
+        "Armazene em recipientes limpos, tampados e ao abrigo da luz."
+      ],
+      "alertas": [
+        "NUNCA use água sanitária com perfume, alvejante ou detergente.",
+        "Água com contaminação química (pesticidas, metais) NÃO é resolvida por fervura ou cloro.",
+        "Consumo mínimo: 2 litros por pessoa por dia (clima quente: 3-4 litros)."
+      ]
+    }
+  },
+  {
+    "id": "AGUA-002",
+    "categoria": "AGUA",
+    "titulo": "Captação de Água da Chuva — Sistema Básico",
+    "resumo": "Montagem de sistema simples de captação e armazenamento de água pluvial.",
+    "nivel": 2,
+    "prioridade": "alta",
+    "tags": ["chuva", "captação", "cisterna", "armazenamento"],
+    "fonte": "Embrapa Semiárido / ASA Brasil",
+    "conteudo": {
+      "objetivo": "Coletar e armazenar água da chuva para uso doméstico e irrigação.",
+      "materiais": [
+        "Calha de PVC ou alumínio",
+        "Tubulação de descida (100mm)",
+        "Filtro de descarte (first flush)",
+        "Reservatório (caixa d'água 500-1000L ou cisterna)",
+        "Tela mosquiteiro para entrada",
+        "Tampa vedada para o reservatório"
+      ],
+      "passos": [
+        "Instale calhas no beiral do telhado, direcionando para um ponto de coleta.",
+        "Monte o sistema de first flush: os primeiros 1-2mm de chuva lavam a sujeira do telhado e devem ser descartados.",
+        "Conecte a tubulação de descida ao reservatório com tela mosquiteiro na entrada.",
+        "Instale o reservatório em base firme e nivelada, preferencialmente à sombra.",
+        "Mantenha o reservatório sempre tampado para evitar proliferação de mosquitos.",
+        "Trate a água antes do consumo humano (fervura ou cloração).",
+        "Limpe calhas e filtros a cada 3 meses."
+      ],
+      "alertas": [
+        "Telhados de amianto (Eternit antigo) podem contaminar a água.",
+        "Obrigatório tampar o reservatório — água parada é criadouro do Aedes aegypti.",
+        "Água de chuva SEM tratamento serve para limpeza e irrigação, não para beber."
+      ]
+    }
+  },
+  {
+    "id": "AGUA-003",
+    "categoria": "AGUA",
+    "titulo": "Filtro de Emergência com Materiais Naturais",
+    "resumo": "Construção de filtro improvisado usando areia, cascalho e carvão vegetal.",
+    "nivel": 2,
+    "prioridade": "alta",
+    "tags": ["filtro", "improvisado", "areia", "carvão"],
+    "fonte": "Manual de Sobrevivência do Exército Brasileiro",
+    "conteudo": {
+      "objetivo": "Construir um filtro funcional para remover partículas e reduzir contaminantes quando não há filtro comercial disponível.",
+      "materiais": [
+        "Garrafa PET 2L (cortada ao meio) ou balde furado",
+        "Algodão ou tecido limpo",
+        "Carvão vegetal (triturado, não ativado comercial)",
+        "Areia fina lavada",
+        "Cascalho ou pedras pequenas"
+      ],
+      "passos": [
+        "Corte a garrafa PET ao meio. Use a parte de cima invertida (como funil).",
+        "Coloque na boca da garrafa: algodão ou tecido (primeira camada).",
+        "Adicione carvão vegetal triturado (5cm de camada).",
+        "Adicione areia fina (8cm de camada).",
+        "Adicione cascalho (5cm de camada).",
+        "Despeje a água lentamente por cima. Colete a filtrada embaixo.",
+        "IMPORTANTE: a água filtrada ainda deve ser FERVIDA ou CLORADA antes de beber.",
+        "Troque o filtro a cada 50 litros ou quando o fluxo ficar muito lento."
+      ],
+      "alertas": [
+        "Este filtro remove partículas e melhora sabor/odor, mas NÃO elimina bactérias e vírus.",
+        "Sempre combine com fervura ou cloração para consumo humano.",
+        "Carvão de churrasqueira com acendedor NÃO serve — use carvão vegetal puro."
+      ]
+    }
+  }
+]

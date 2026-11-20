@@ -1,0 +1,91 @@
+[
+  {
+    "id": "DESA-001",
+    "categoria": "DESA",
+    "titulo": "Enchente e Alagamento — Procedimentos",
+    "resumo": "O que fazer antes, durante e depois de enchentes, o desastre mais comum no Brasil.",
+    "nivel": 1,
+    "prioridade": "critica",
+    "tags": ["enchente", "alagamento", "inundação", "evacuação"],
+    "fonte": "Defesa Civil Nacional / CEMADEN",
+    "conteudo": {
+      "objetivo": "Proteger vidas e reduzir perdas materiais durante eventos de enchente e alagamento.",
+      "passos": [
+        "ANTES: Conheça o histórico de enchentes do seu bairro. Consulte alertas do CEMADEN.",
+        "ANTES: Não jogue lixo em bueiros e rios. Desobstrua calhas e ralos da casa.",
+        "ANTES: Tenha a mochila de emergência pronta (protocolo PREP-001).",
+        "DURANTE: Se a água começar a subir, desligue energia no disjuntor (NUNCA com os pés na água).",
+        "DURANTE: Suba para o andar superior ou local alto. Nunca desça para garagem ou porão.",
+        "DURANTE: NÃO tente atravessar enxurrada a pé ou de carro — 30cm de água corrente derrubam um adulto, 60cm arrastam um carro.",
+        "DURANTE: Afaste-se de postes, fios caídos e árvores.",
+        "DEPOIS: Não entre em imóvel alagado até a água baixar completamente.",
+        "DEPOIS: Lave tudo com água sanitária (1 copo para 20L de água) — risco de leptospirose.",
+        "DEPOIS: Jogue fora alimentos que tiveram contato com água da enchente, inclusive enlatados com ferrugem."
+      ],
+      "alertas": [
+        "Leptospirose: evite contato com água ou lama de enchente. Sintomas: febre alta, dor muscular intensa. Procure atendimento em até 48h.",
+        "Risco elétrico: postes e fios submersos podem eletrificar a água.",
+        "Crianças são especialmente vulneráveis — nunca deixe brincar na água de enchente."
+      ]
+    }
+  },
+  {
+    "id": "DESA-002",
+    "categoria": "DESA",
+    "titulo": "Deslizamento de Terra — Sinais e Evacuação",
+    "resumo": "Como identificar sinais de deslizamento iminente e evacuar com segurança.",
+    "nivel": 1,
+    "prioridade": "critica",
+    "tags": ["deslizamento", "encosta", "morro", "evacuação"],
+    "fonte": "CPRM / IPT / Defesa Civil",
+    "conteudo": {
+      "objetivo": "Reconhecer sinais de instabilidade de encosta e evacuar antes do deslizamento.",
+      "passos": [
+        "SINAIS DE ALERTA: trincas no solo ou paredes, árvores inclinadas, postes tortos.",
+        "SINAIS DE ALERTA: água brotando do solo/muro, barulho de estalo ou estrondo surdo.",
+        "SINAIS DE ALERTA: portas e janelas emperrando (movimentação da estrutura).",
+        "Se identificar sinais: EVACUE IMEDIATAMENTE. Não espere ordem oficial.",
+        "Evacue lateralmente — nunca suba ou desça a encosta.",
+        "Leve apenas a mochila de emergência e documentos.",
+        "Vá para o ponto de encontro do plano familiar (protocolo PREP-002).",
+        "Ligue para a Defesa Civil: 199. Não retorne até liberação oficial.",
+        "Após o evento: não entre em imóveis danificados sem avaliação técnica."
+      ],
+      "alertas": [
+        "Chuvas acima de 100mm em 24h em área de encosta = risco máximo.",
+        "O Brasil tem mais de 8 milhões de pessoas em áreas de risco de deslizamento.",
+        "Nunca construa ou corte vegetação em encostas íngremes."
+      ]
+    }
+  },
+  {
+    "id": "DESA-003",
+    "categoria": "DESA",
+    "titulo": "Incêndio Residencial — Evacuação",
+    "resumo": "Procedimentos de evacuação segura em caso de incêndio em residência.",
+    "nivel": 1,
+    "prioridade": "critica",
+    "tags": ["incêndio", "fogo", "evacuação", "fumaça"],
+    "fonte": "Corpo de Bombeiros / ABNT",
+    "conteudo": {
+      "objetivo": "Evacuar com segurança todos os moradores em caso de incêndio residencial.",
+      "passos": [
+        "Ao perceber fogo ou fumaça: GRITE 'FOGO' para alertar todos os moradores.",
+        "Ligue 193 (Bombeiros). Informe endereço e pavimento.",
+        "SAIA IMEDIATAMENTE. Não perca tempo coletando pertences.",
+        "Teste portas antes de abrir: toque com as costas da mão. Se quente, não abra.",
+        "Caminhe agachado — fumaça e calor sobem, o ar mais limpo está embaixo (30cm do chão).",
+        "Se possível, cubra nariz e boca com pano úmido.",
+        "Use escadas. NUNCA use elevadores em incêndio.",
+        "Se não conseguir sair: feche-se em um cômodo, vede frestas com panos molhados, sinalize pela janela.",
+        "Ponto de encontro: local combinado a pelo menos 15 metros do prédio.",
+        "NUNCA volte a um prédio em chamas por nenhum motivo."
+      ],
+      "alertas": [
+        "Fumaça mata mais que fogo — a maioria das vítimas morre por inalação.",
+        "Um cômodo em chamas atinge 600°C em menos de 3 minutos.",
+        "Instale detectores de fumaça — custam pouco e salvam vidas."
+      ]
+    }
+  }
+]

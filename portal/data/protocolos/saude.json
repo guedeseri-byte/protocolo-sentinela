@@ -1,0 +1,109 @@
+[
+  {
+    "id": "SAUD-001",
+    "categoria": "SAUD",
+    "titulo": "Primeiros Socorros — Parada Cardiorrespiratória (RCP)",
+    "resumo": "Protocolo de reanimação cardiopulmonar para leigos conforme diretrizes da AHA/SBC.",
+    "nivel": 1,
+    "prioridade": "critica",
+    "tags": ["RCP", "parada cardíaca", "massagem", "primeiros socorros"],
+    "fonte": "American Heart Association / Sociedade Brasileira de Cardiologia",
+    "conteudo": {
+      "objetivo": "Manter circulação sanguínea e oxigenação até chegada do socorro especializado.",
+      "passos": [
+        "VERIFIQUE A SEGURANÇA do local antes de se aproximar.",
+        "Toque nos ombros da vítima e pergunte em voz alta: 'Você está bem?'",
+        "Se não responde e não respira normalmente: LIGUE 192 (SAMU) imediatamente.",
+        "Peça para alguém buscar um DEA (desfibrilador) se disponível.",
+        "Posicione a vítima de costas em superfície rígida e plana.",
+        "Ajoelhe-se ao lado. Coloque a base de uma mão no centro do peito (entre os mamilos).",
+        "Coloque a outra mão por cima, entrelaçando os dedos.",
+        "Comprima FORTE e RÁPIDO: profundidade de 5-6 cm, frequência de 100-120 por minuto.",
+        "Permita o retorno total do tórax entre as compressões.",
+        "Se treinado em ventilação: 30 compressões + 2 ventilações. Se não: apenas compressões sem parar.",
+        "NÃO pare até: socorro chegar, vítima reagir, ou você não conseguir mais fisicamente."
+      ],
+      "alertas": [
+        "Cada minuto sem RCP reduz em 10% a chance de sobrevivência.",
+        "É melhor fazer RCP imperfeita do que não fazer nada.",
+        "Em crianças: use apenas uma mão. Em bebês: use dois dedos."
+      ]
+    }
+  },
+  {
+    "id": "SAUD-002",
+    "categoria": "SAUD",
+    "titulo": "Controle de Hemorragias Graves",
+    "resumo": "Técnicas de compressão e torniquete para sangramentos que ameaçam a vida.",
+    "nivel": 1,
+    "prioridade": "critica",
+    "tags": ["hemorragia", "sangramento", "torniquete", "compressão"],
+    "fonte": "PHTLS / Ministério da Saúde",
+    "conteudo": {
+      "objetivo": "Conter sangramento externo grave para prevenir choque hipovolêmico até chegada do socorro.",
+      "passos": [
+        "LIGUE 192 (SAMU) ou 193 (Bombeiros) imediatamente.",
+        "Use luvas ou saco plástico para proteção — evite contato direto com sangue.",
+        "COMPRESSÃO DIRETA: aplique pressão firme sobre o ferimento com pano limpo ou gaze.",
+        "Mantenha a pressão constante. NÃO retire o pano para verificar — adicione mais por cima.",
+        "Se possível, eleve o membro ferido acima do nível do coração.",
+        "Se a compressão não funcionar em membro (braço/perna) e o sangramento for incontrolável:",
+        "TORNIQUETE: use cinto, tira de pano ou corda larga (nunca fina como arame).",
+        "Aplique 5-7 cm acima do ferimento, entre o ferimento e o coração.",
+        "Aperte até o sangramento parar. Anote o horário de aplicação.",
+        "NÃO afrouxe o torniquete — deixe para o profissional de saúde."
+      ],
+      "alertas": [
+        "Hemorragias graves podem matar em 3-5 minutos.",
+        "Nunca remova objetos encravados — estabilize e aguarde socorro.",
+        "Torniquete é ÚLTIMO recurso — apenas quando compressão direta falha em membros."
+      ]
+    }
+  },
+  {
+    "id": "SAUD-003",
+    "categoria": "SAUD",
+    "titulo": "Kit de Primeiros Socorros — Montagem e Uso",
+    "resumo": "Lista completa de materiais e guia de uso do kit de primeiros socorros doméstico.",
+    "nivel": 1,
+    "prioridade": "alta",
+    "tags": ["kit", "materiais", "curativos", "farmácia"],
+    "fonte": "Ministério da Saúde / Cruz Vermelha Brasileira",
+    "conteudo": {
+      "objetivo": "Montar e manter um kit completo de primeiros socorros para emergências domésticas e evacuação.",
+      "materiais": [
+        "Luvas descartáveis (mínimo 4 pares)",
+        "Gaze estéril (pacotes individuais)",
+        "Ataduras de crepe (5cm e 10cm)",
+        "Esparadrapo ou micropore",
+        "Band-aids diversos tamanhos",
+        "Soro fisiológico 250ml",
+        "Antisséptico (clorexidina ou PVPI)",
+        "Tesoura de ponta romba",
+        "Pinça",
+        "Termômetro digital",
+        "Paracetamol 500mg e 750mg",
+        "Ibuprofeno 400mg",
+        "Sais de reidratação oral",
+        "Pomada para queimaduras (sulfadiazina de prata)",
+        "Anti-histamínico (loratadina)",
+        "Talas moldáveis ou revistas para imobilização",
+        "Cobertor térmico (manta aluminizada)",
+        "Manual de primeiros socorros"
+      ],
+      "passos": [
+        "Escolha uma caixa ou bolsa resistente, impermeável e de fácil identificação (cruz vermelha).",
+        "Organize por tipo: curativos, medicamentos, instrumentos.",
+        "Mantenha em local acessível a adultos e fora do alcance de crianças.",
+        "Verifique validades mensalmente — especialmente medicamentos e soro.",
+        "Reponha itens usados imediatamente.",
+        "Tenha um kit em casa, um no carro e um na mochila de emergência."
+      ],
+      "alertas": [
+        "Inclua medicamentos de uso contínuo de cada membro da família (mínimo 7 dias).",
+        "Adicione EPIPen se alguém da família tem alergia grave.",
+        "Nunca use medicamentos vencidos."
+      ]
+    }
+  }
+]

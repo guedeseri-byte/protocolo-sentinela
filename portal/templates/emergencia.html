@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}MODO DE EMERGÊNCIA — Protocolo Sentinela{% endblock %}
+
+{% block content %}
+<section class="emergencia-header">
+    <div class="emergencia-inner">
+        <h1 class="emergencia-titulo">MODO DE EMERGÊNCIA</h1>
+        <p class="emergencia-sub">Protocolos críticos — ações imediatas para salvar vidas</p>
+        <div class="emergencia-telefones">
+            <a href="tel:192" class="tel-btn tel-samu">📞 SAMU 192</a>
+            <a href="tel:193" class="tel-btn tel-bombeiros">📞 BOMBEIROS 193</a>
+            <a href="tel:199" class="tel-btn tel-defesa">📞 DEFESA CIVIL 199</a>
+        </div>
+    </div>
+</section>
+
+<section class="emergencia-protocolos">
+    {% for p in protocolos %}
+    <a href="/protocolo/{{ p.id }}" class="emergencia-card">
+        <div class="emergencia-card-header">
+            <span class="emergencia-cat">
+                {% set cat = categorias.get(p.categoria, {}) %}
+                {{ cat.get('icone', '📋') }} {{ cat.get('nome', p.categoria) }}
+            </span>
+            <span class="emergencia-badge">CRÍTICO</span>
+        </div>
+        <h2 class="emergencia-card-titulo">{{ p.titulo }}</h2>
+        <p class="emergencia-card-resumo">{{ p.resumo }}</p>
+        {% if p.conteudo and p.conteudo.passos %}
+        <div class="emergencia-card-preview">
+            <strong>Primeiro passo:</strong> {{ p.conteudo.passos[0] }}
+        </div>
+        {% endif %}
+    </a>
+    {% endfor %}
+</section>
+
+<section class="emergencia-footer-section">
+    <a href="/" class="btn-voltar">← Voltar ao modo normal</a>
+</section>
+{% endblock %}

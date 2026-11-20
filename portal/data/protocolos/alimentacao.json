@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ALIM-001",
+    "categoria": "ALIM",
+    "titulo": "Estoque Alimentar de Emergência — 30 Dias",
+    "resumo": "Lista e rotação de alimentos não perecíveis para manter uma família por 30 dias sem reabastecimento.",
+    "nivel": 1,
+    "prioridade": "critica",
+    "tags": ["estoque", "despensa", "não perecível", "armazenamento"],
+    "fonte": "Protocolo Vermelho Familiar / Embrapa",
+    "conteudo": {
+      "objetivo": "Montar e manter despensa de emergência com alimentos de longa validade para 30 dias de autonomia alimentar.",
+      "materiais": [
+        "Arroz (5kg por pessoa)",
+        "Feijão (3kg por pessoa)",
+        "Macarrão (2kg por pessoa)",
+        "Farinha de trigo e de mandioca (2kg cada)",
+        "Óleo de cozinha (2L)",
+        "Sal (1kg)",
+        "Açúcar (2kg)",
+        "Leite em pó (1kg)",
+        "Enlatados: atum, sardinha, milho, ervilha (20 latas)",
+        "Charque ou carne seca (1kg)",
+        "Aveia (1kg)",
+        "Café e chá",
+        "Temperos secos: alho em pó, cebola, pimenta",
+        "Mel (1 pote — não vence)",
+        "Barras de cereais e frutas secas"
+      ],
+      "passos": [
+        "Calcule a necessidade: 2.000 kcal/dia por adulto. Crianças e idosos: ajuste conforme.",
+        "Armazene em local fresco, seco e ao abrigo da luz.",
+        "Use recipientes herméticos para grãos — protege contra umidade e pragas.",
+        "Aplique o sistema FIFO: primeiro a entrar, primeiro a sair. Marque datas.",
+        "Verifique validades mensalmente e consuma/reponha antes do vencimento.",
+        "Inclua alimentos que não precisam de cozimento (enlatados, barras) para cenários sem gás/energia.",
+        "Mantenha ao menos 2L de água por pessoa/dia separados para preparo de alimentos."
+      ],
+      "alertas": [
+        "Enlatados amassados, estufados ou com ferrugem devem ser DESCARTADOS.",
+        "Sem energia elétrica, alimentos de geladeira/freezer duram: geladeira 4h, freezer 24-48h (fechados).",
+        "Em emergência, priorize calorias sobre nutrição balanceada."
+      ]
+    }
+  },
+  {
+    "id": "ALIM-002",
+    "categoria": "ALIM",
+    "titulo": "Plantas Alimentícias Não Convencionais (PANC)",
+    "resumo": "Identificação e preparo de plantas comestíveis comuns no Brasil para suplementação alimentar.",
+    "nivel": 2,
+    "prioridade": "media",
+    "tags": ["PANC", "plantas", "comestível", "forragear"],
+    "fonte": "Embrapa / MAPA",
+    "conteudo": {
+      "objetivo": "Identificar plantas alimentícias seguras encontradas em ambientes urbanos e rurais brasileiros.",
+      "passos": [
+        "REGRA DE OURO: nunca coma planta que não identificou com 100% de certeza.",
+        "PANCs comuns e seguras no Brasil: ora-pro-nóbis, taioba (folha), capuchinha, beldroega, serralha, dente-de-leão.",
+        "Ora-pro-nóbis (Pereskia aculeata): folhas comestíveis cruas ou cozidas, rica em proteínas (até 25%).",
+        "Taioba (Xanthosoma sagittifolium): APENAS as folhas, NUNCA o talo cru. Cozinhe bem.",
+        "Beldroega (Portulaca oleracea): inteira, rica em ômega-3, crua em saladas ou refogada.",
+        "Dente-de-leão (Taraxacum officinale): folhas em salada, raiz torrada como café.",
+        "Sempre lave bem em água corrente. Se possível, deixe de molho em água com vinagre.",
+        "Comece com pequena quantidade para testar tolerância."
+      ],
+      "alertas": [
+        "NUNCA coma planta silvestre sem identificação por especialista ou guia confiável.",
+        "Confusão com plantas tóxicas pode ser FATAL (ex: comigo-ninguém-pode parece taioba).",
+        "Evite plantas próximas a rodovias, esgotos ou áreas com agrotóxicos."
+      ]
+    }
+  }
+]

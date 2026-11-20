@@ -1,0 +1,104 @@
+[
+  {
+    "id": "PREP-001",
+    "categoria": "PREP",
+    "titulo": "Kit 72 Horas — Mochila de Emergência",
+    "resumo": "Lista completa e procedimento de montagem de mochila de evacuação para 72 horas de autonomia.",
+    "nivel": 1,
+    "prioridade": "critica",
+    "tags": ["kit", "mochila", "evacuação", "72h", "bug-out"],
+    "fonte": "Defesa Civil / Protocolo Vermelho Familiar",
+    "conteudo": {
+      "objetivo": "Montar e manter uma mochila de evacuação que garanta sobrevivência autônoma por 72 horas para cada membro da família.",
+      "materiais": [
+        "Mochila resistente 40-60L",
+        "Água: 3L por pessoa (mínimo)",
+        "Alimentos não perecíveis para 3 dias",
+        "Kit primeiros socorros completo",
+        "Lanterna + pilhas extras",
+        "Rádio AM/FM a pilha ou manivela",
+        "Apito de emergência",
+        "Cópias de documentos em saco plástico",
+        "Dinheiro em espécie (notas pequenas)",
+        "Muda de roupa + agasalho",
+        "Cobertor térmico (manta aluminizada)",
+        "Fósforos/isqueiro em recipiente impermeável",
+        "Canivete multiferramenta",
+        "Fita adesiva reforçada (silver tape)",
+        "Corda de nylon 10m",
+        "Mapa da região (impresso)",
+        "Carregador portátil (power bank)"
+      ],
+      "passos": [
+        "Escolha uma mochila resistente e impermeável. Teste o conforto com peso (ideal: até 20% do seu peso corporal).",
+        "Embale água em garrafas rígidas. Adicione pastilhas purificadoras como backup.",
+        "Selecione alimentos de alta caloria e longa validade: barras de cereais, frutas secas, enlatados com abre-fácil.",
+        "Monte o kit de primeiros socorros: gaze, esparadrapo, antisséptico, analgésicos, medicamentos pessoais.",
+        "Inclua documentos: RG, CPF, carteira de vacinação, receitas médicas — cópias plastificadas.",
+        "Adicione itens pessoais essenciais: óculos reserva, medicamentos de uso contínuo.",
+        "Faça revisão trimestral: verifique validades, troque pilhas, atualize documentos.",
+        "Armazene em local de fácil acesso — próximo à porta de saída principal."
+      ],
+      "alertas": [
+        "Cada membro da família deve ter sua própria mochila, incluindo crianças (versão leve).",
+        "Não esqueça necessidades de bebês, idosos e animais de estimação.",
+        "A mochila deve ser pega em menos de 60 segundos em uma evacuação."
+      ]
+    }
+  },
+  {
+    "id": "PREP-002",
+    "categoria": "PREP",
+    "titulo": "Plano Familiar de Emergência",
+    "resumo": "Como criar e ensaiar um plano de comunicação e reunião familiar para situações de desastre.",
+    "nivel": 1,
+    "prioridade": "critica",
+    "tags": ["família", "plano", "comunicação", "ponto de encontro"],
+    "fonte": "Defesa Civil Nacional",
+    "conteudo": {
+      "objetivo": "Estabelecer procedimentos claros para que todos os membros da família saibam o que fazer, para onde ir e como se comunicar durante uma emergência.",
+      "passos": [
+        "Reúna a família e discuta os tipos de desastre mais prováveis na sua região (enchente, deslizamento, incêndio).",
+        "Defina dois pontos de encontro: um próximo à casa e outro fora do bairro.",
+        "Escolha um contato fora da cidade como ponto central de comunicação.",
+        "Anote telefones importantes em cartão plastificado para cada membro: SAMU 192, Bombeiros 193, Defesa Civil 199.",
+        "Identifique rotas de evacuação da casa e do bairro. Caminhe por elas com a família.",
+        "Ensine crianças a discar números de emergência e dizer nome completo e endereço.",
+        "Pratique o plano a cada 6 meses com simulação realista.",
+        "Mantenha cópias do plano na mochila de emergência e no local de trabalho."
+      ],
+      "alertas": [
+        "SMS funciona melhor que ligações em emergências — redes ficam congestionadas.",
+        "Combine sinais visuais (pano na janela) caso não haja comunicação."
+      ]
+    }
+  },
+  {
+    "id": "PREP-003",
+    "categoria": "PREP",
+    "titulo": "Avaliação de Riscos Residenciais",
+    "resumo": "Checklist para identificar vulnerabilidades da residência a desastres naturais e acidentes.",
+    "nivel": 1,
+    "prioridade": "alta",
+    "tags": ["casa", "riscos", "vulnerabilidade", "checklist"],
+    "fonte": "CPRM / Defesa Civil",
+    "conteudo": {
+      "objetivo": "Mapear e reduzir vulnerabilidades da residência frente a desastres naturais, acidentes domésticos e falhas de infraestrutura.",
+      "passos": [
+        "Verifique se a casa está em área de risco: consulte mapas do CPRM (Serviço Geológico do Brasil) e da Defesa Civil municipal.",
+        "Inspecione a estrutura: rachaduras em paredes, infiltrações, telhado, fundação.",
+        "Verifique instalações elétricas: fios expostos, disjuntores, aterramento.",
+        "Cheque instalações hidráulicas: vazamentos, registro geral acessível.",
+        "Avalie escoamento de água: calhas, ralos, inclinação do terreno.",
+        "Identifique pontos de ancoragem para móveis altos em regiões sísmicas.",
+        "Verifique extintores de incêndio (validade e acesso).",
+        "Confirme que detectores de fumaça estão instalados e funcionando.",
+        "Mapeie saídas de emergência e garanta que não estejam obstruídas."
+      ],
+      "alertas": [
+        "Se a casa apresentar rachaduras diagonais nas paredes, procure avaliação de engenheiro imediatamente.",
+        "Morros com inclinação acentuada e solo exposto são indicadores de risco de deslizamento."
+      ]
+    }
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "MANU-001",
+    "categoria": "MANU",
+    "titulo": "Reparo Hidráulico de Emergência",
+    "resumo": "Reparos temporários em encanamento para conter vazamentos até conserto definitivo.",
+    "nivel": 2,
+    "prioridade": "alta",
+    "tags": ["encanamento", "vazamento", "reparo", "hidráulica"],
+    "fonte": "SENAI / Manual do Proprietário",
+    "conteudo": {
+      "objetivo": "Conter vazamentos de água em canos e conexões usando materiais acessíveis.",
+      "passos": [
+        "PRIMEIRO: feche o registro geral de água da casa.",
+        "Para furos pequenos em cano: limpe e seque a área. Aplique fita veda-rosca apertada.",
+        "Para furos maiores: use abraçadeira metálica com borracha (disponível em ferragens).",
+        "Reparo com câmara de pneu: corte um pedaço de borracha, envolva o cano sobre o furo, prenda com arame ou abraçadeira.",
+        "Conexões soltas: aplique fita veda-rosca na rosca (no sentido horário) e reaperte.",
+        "Cano de PVC trincado: massa epóxi (Durepoxi) aplicada sobre o trincado seco resolve temporariamente.",
+        "Depois de reparar: abra o registro lentamente e verifique se o vazamento parou.",
+        "Agenda reparo definitivo com profissional o mais breve possível."
+      ],
+      "alertas": [
+        "Nunca tente reparar cano de GÁS — feche o registro e chame a concessionária imediatamente.",
+        "Água quente: deixe esfriar antes de mexer no encanamento.",
+        "Reparos temporários NÃO substituem conserto profissional."
+      ]
+    }
+  }
+]

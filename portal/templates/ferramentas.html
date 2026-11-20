@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block title %}Ferramentas — Protocolo Sentinela{% endblock %}
+
+{% block content %}
+<section class="central-header">
+    <div class="central-inner">
+        <h1 class="section-title">Ferramentas</h1>
+        <p class="central-desc">Calculadoras e checklists para planejamento de preparação</p>
+    </div>
+</section>
+
+<section class="ferramentas-content">
+    <!-- Calculadora de Água -->
+    <div class="ferramenta-card" id="calc-agua">
+        <h2 class="section-title">💧 Calculadora de Água</h2>
+        <p>Calcule a necessidade de água para sua família</p>
+        <div class="calc-form">
+            <label>Pessoas: <input type="number" id="agua-pessoas" value="4" min="1" max="20"></label>
+            <label>Dias: <input type="number" id="agua-dias" value="7" min="1" max="90"></label>
+            <label>Clima:
+                <select id="agua-clima">
+                    <option value="2">Ameno (2L/pessoa/dia)</option>
+                    <option value="3" selected>Normal (3L/pessoa/dia)</option>
+                    <option value="4">Quente (4L/pessoa/dia)</option>
+                </select>
+            </label>
+            <button onclick="calcAgua()" class="busca-btn">Calcular</button>
+            <div id="agua-resultado" class="calc-resultado"></div>
+        </div>
+    </div>
+
+    <!-- Calculadora de Alimentos -->
+    <div class="ferramenta-card" id="calc-alimentos">
+        <h2 class="section-title">🌾 Calculadora de Alimentos</h2>
+        <p>Estime o estoque alimentar necessário</p>
+        <div class="calc-form">
+            <label>Adultos: <input type="number" id="alim-adultos" value="2" min="0" max="20"></label>
+            <label>Crianças: <input type="number" id="alim-criancas" value="2" min="0" max="20"></label>
+            <label>Dias: <input type="number" id="alim-dias" value="30" min="1" max="365"></label>
+            <button onclick="calcAlimentos()" class="busca-btn">Calcular</button>
+            <div id="alim-resultado" class="calc-resultado"></div>
+        </div>
+    </div>
+
+    <!-- Calculadora de Energia Solar -->
+    <div class="ferramenta-card" id="calc-energia">
+        <h2 class="section-title">⚡ Calculadora de Energia Solar</h2>
+        <p>Dimensione um sistema solar básico</p>
+        <div class="calc-form">
+            <label>Iluminação LED (horas/dia): <input type="number" id="ener-led" value="6" min="0" max="24"></label>
+            <label>Cargas de celular/dia: <input type="number" id="ener-cel" value="2" min="0" max="10"></label>
+            <label>Rádio (horas/dia): <input type="number" id="ener-radio" value="4" min="0" max="24"></label>
+            <button onclick="calcEnergia()" class="busca-btn">Calcular</button>
+            <div id="ener-resultado" class="calc-resultado"></div>
+        </div>
+    </div>
+
+    <!-- Checklist de Prontidão -->
+    <div class="ferramenta-card" id="checklist">
+        <h2 class="section-title">✅ Checklist de Prontidão</h2>
+        <p>Avalie seu nível de preparação</p>
+        <div class="checklist-items">
+            <label class="check-item"><input type="checkbox" onchange="updateChecklist()"> Mochila de 72h montada e atualizada</label>
+            <label class="check-item"><input type="checkbox" onchange="updateChecklist()"> Plano familiar de emergência definido</label>
+            <label class="check-item"><input type="checkbox" onchange="updateChecklist()"> Estoque de água para 7+ dias</label>
+            <label class="check-item"><input type="checkbox" onchange="updateChecklist()"> Estoque alimentar para 30+ dias</label>
+            <label class="check-item"><input type="checkbox" onchange="updateChecklist()"> Kit de primeiros socorros completo</label>
+            <label class="check-item"><input type="checkbox" onchange="updateChecklist()"> Documentos em cópia plastificada</label>
+            <label class="check-item"><input type="checkbox" onchange="updateChecklist()"> Rádio AM/FM com pilhas</label>
+            <label class="check-item"><input type="checkbox" onchange="updateChecklist()"> Lanterna e pilhas extras</label>
+            <label class="check-item"><input type="checkbox" onchange="updateChecklist()"> Dinheiro em espécie (notas pequenas)</label>
+            <label class="check-item"><input type="checkbox" onchange="updateChecklist()"> Rotas de evacuação conhecidas</label>
+            <label class="check-item"><input type="checkbox" onchange="updateChecklist()"> Contatos de emergência anotados</label>
+            <label class="check-item"><input type="checkbox" onchange="updateChecklist()"> Extintor de incêndio na validade</label>
+        </div>
+        <div id="checklist-resultado" class="calc-resultado">
+            <strong>Nível: Iniciante</strong> — 0 de 12 itens
+        </div>
+    </div>
+</section>
+
+<script>
+function calcAgua() {
+    const p = +document.getElementById('agua-pessoas').value;
+    const d = +document.getElementById('agua-dias').value;
+    const l = +document.getElementById('agua-clima').value;
+    const total = p * d * l;
+    const galoes = Math.ceil(total / 20);
+    document.getElementById('agua-resultado').innerHTML =
+        '<strong>' + total + ' litros</strong> necessários<br>' +
+        '(' + p + ' pessoas × ' + d + ' dias × ' + l + 'L/dia)<br>' +
+        'Equivale a ' + galoes + ' galões de 20L';
+}
+
+function calcAlimentos() {
+    const a = +document.getElementById('alim-adultos').value;
+    const c = +document.getElementById('alim-criancas').value;
+    const d = +document.getElementById('alim-dias').value;
+    const kcalDia = (a * 2000) + (c * 1500);
+    const kcalTotal = kcalDia * d;
+    const arroz = Math.ceil((a + c * 0.5) * d * 0.15);
+    const feijao = Math.ceil((a + c * 0.5) * d * 0.1);
+    document.getElementById('alim-resultado').innerHTML =
+        '<strong>' + kcalTotal.toLocaleString() + ' kcal</strong> total necessário<br>' +
+        '(' + kcalDia.toLocaleString() + ' kcal/dia)<br>' +
+        'Estimativa mínima: ~' + arroz + 'kg arroz + ~' + feijao + 'kg feijão<br>' +
+        '+ enlatados, óleo, sal, açúcar, leite em pó';
+}
+
+function calcEnergia() {
+    const led = +document.getElementById('ener-led').value * 10;
+    const cel = +document.getElementById('ener-cel').value * 10;
+    const radio = +document.getElementById('ener-radio').value * 5;
+    const totalWh = led + cel + radio;
+    const painel = Math.ceil(totalWh / 4);
+    const bateria = Math.ceil(totalWh * 2 / 12);
+    document.getElementById('ener-resultado').innerHTML =
+        '<strong>' + totalWh + ' Wh/dia</strong> consumo estimado<br>' +
+        'Painel solar recomendado: <strong>' + painel + 'W</strong> (mínimo)<br>' +
+        'Bateria 12V recomendada: <strong>' + bateria + 'Ah</strong> (2 dias autonomia)';
+}
+
+function updateChecklist() {
+    const checks = document.querySelectorAll('.checklist-items input[type=checkbox]');
+    let checked = 0;
+    checks.forEach(c => { if (c.checked) checked++; });
+    const total = checks.length;
+    const pct = Math.round(checked / total * 100);
+    let nivel = 'Iniciante';
+    let cor = '#F44336';
+    if (pct >= 90) { nivel = 'Avançado'; cor = '#4CAF50'; }
+    else if (pct >= 60) { nivel = 'Intermediário'; cor = '#FF9800'; }
+    else if (pct >= 30) { nivel = 'Básico'; cor = '#FFC107'; }
+    document.getElementById('checklist-resultado').innerHTML =
+        '<strong style="color:' + cor + '">Nível: ' + nivel + '</strong> — ' + checked + ' de ' + total + ' itens (' + pct + '%)';
+}
+</script>
+{% endblock %}

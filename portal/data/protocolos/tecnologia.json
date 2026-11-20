@@ -1,0 +1,33 @@
+[
+  {
+    "id": "TECH-001",
+    "categoria": "TECH",
+    "titulo": "IA Offline — Usando o Protocolo Sentinela com Ollama",
+    "resumo": "Como consultar a IA local para obter respostas baseadas na biblioteca de documentos do Sentinela.",
+    "nivel": 1,
+    "prioridade": "media",
+    "tags": ["IA", "Ollama", "Open WebUI", "RAG", "consulta"],
+    "fonte": "Protocolo Sentinela",
+    "conteudo": {
+      "objetivo": "Usar a IA local (Ollama + Open WebUI) para consultar protocolos, tirar dúvidas e obter orientações mesmo sem internet.",
+      "passos": [
+        "Acesse http://localhost/ia/ no navegador de qualquer dispositivo na rede.",
+        "A IA roda 100% local — nenhum dado sai do seu computador.",
+        "Para consultas gerais: digite sua pergunta normalmente. Ex: 'Como purificar água em emergência?'",
+        "Para consultas com RAG (documentos): clique no ícone de documento e selecione a coleção 'Protocolos Sentinela'.",
+        "O RAG busca nos documentos locais e fornece respostas com citação da fonte.",
+        "Modelos recomendados por tarefa:",
+        "  - Consultas em português: Sabiá-3 ou Tucano (treinados em PT-BR)",
+        "  - Raciocínio e análise: Qwen3 8B",
+        "  - Uso geral: Llama 3.1 8B",
+        "Para trocar modelo: clique no nome do modelo no topo do chat.",
+        "Dica: perguntas específicas geram respostas melhores que genéricas."
+      ],
+      "alertas": [
+        "A IA é uma ferramenta de APOIO — não substitui conhecimento profissional.",
+        "Respostas médicas da IA devem ser verificadas em fontes oficiais quando possível.",
+        "Modelos maiores (13B+) exigem mais RAM/VRAM — 8B é o ideal para hardware modesto."
+      ]
+    }
+  }
+]

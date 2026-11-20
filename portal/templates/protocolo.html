@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}{{ protocolo.titulo }} — Protocolo Sentinela{% endblock %}
+
+{% block content %}
+<section class="proto-header" style="--mod-cor: {{ categoria.get('cor', '#D6A64F') }}">
+    <div class="proto-header-inner">
+        <div class="proto-meta">
+            <span class="proto-id">{{ protocolo.id }}</span>
+            <span class="proto-cat">{{ categoria.get('icone', '📋') }} {{ categoria.get('nome', '') }}</span>
+            {% if nivel %}
+            <span class="proto-nivel" style="background: {{ nivel.get('cor', '#666') }}">Nível {{ protocolo.nivel }}: {{ nivel.get('nome', '') }}</span>
+            {% endif %}
+            {% if prioridade %}
+            <span class="proto-prio">{{ prioridade.get('icone', '') }} {{ prioridade.get('nome', '') }}</span>
+            {% endif %}
+        </div>
+        <h1 class="proto-titulo">{{ protocolo.titulo }}</h1>
+        <p class="proto-resumo">{{ protocolo.resumo }}</p>
+        {% if protocolo.fonte %}
+        <p class="proto-fonte">Fonte: {{ protocolo.fonte }}</p>
+        {% endif %}
+    </div>
+</section>
+
+<section class="proto-content">
+    {% set c = protocolo.conteudo %}
+
+    {% if c.objetivo %}
+    <div class="proto-section">
+        <h2 class="section-title">Objetivo</h2>
+        <p class="proto-objetivo">{{ c.objetivo }}</p>
+    </div>
+    {% endif %}
+
+    {% if c.materiais %}
+    <div class="proto-section">
+        <h2 class="section-title">Materiais Necessários</h2>
+        <ul class="proto-lista proto-materiais">
+            {% for item in c.materiais %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    {% if c.passos %}
+    <div class="proto-section">
+        <h2 class="section-title">Passo a Passo</h2>
+        <ol class="proto-lista proto-passos">
+            {% for passo in c.passos %}
+            <li>{{ passo }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+    {% endif %}
+
+    {% if c.alertas %}
+    <div class="proto-section">
+        <h2 class="section-title">⚠️ Alertas Importantes</h2>
+        <div class="proto-alertas">
+            {% for alerta in c.alertas %}
+            <div class="proto-alerta">{{ alerta }}</div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="proto-nav">
+        <a href="javascript:history.back()" class="btn-voltar">← Voltar</a>
+        <a href="/protocolos" class="btn-voltar">Central de Protocolos</a>
+        <a href="/emergencia" class="btn-emergencia">🚨 Modo Emergência</a>
+    </div>
+</section>
+{% endblock %}
