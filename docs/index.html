@@ -335,6 +335,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            background: url('img/banner-bg.webp') center center / cover no-repeat;
         }
 
         .banner-inner {
@@ -359,12 +360,7 @@
             z-index: 0;
         }
 
-        .banner-bg-pattern {
-            position: absolute;
-            inset: 0;
-            opacity: 0.08;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 15 L30 12 L25 15Z' fill='%23315B4C'/%3E%3Cpath d='M30 15 L38 28 L30 24 L22 28Z' fill='%23315B4C'/%3E%3Cpath d='M30 25 L40 42 L30 36 L20 42Z' fill='%23315B4C'/%3E%3Crect x='29' y='42' width='2' height='8' fill='%23315B4C'/%3E%3C/svg%3E") repeat;
-        }
+        .banner-bg-pattern { display: none; }
 
         .banner-compass {
             width: 140px;
@@ -520,6 +516,92 @@
 
         .dot.active { background: var(--ambar); }
 
+        /* ── Instalação ──────────────────────────────── */
+
+        .install {
+            padding: 5.5rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .install-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .install-step {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .install-num {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--verde-profundo), var(--azul-petroleo));
+            border: 1px solid var(--borda);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: var(--ambar);
+        }
+
+        .install-step-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .install-step-body p {
+            color: var(--texto-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0.6rem;
+        }
+
+        .install-code {
+            background: rgba(0,0,0,0.4);
+            border: 1px solid var(--borda);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--ambar);
+            overflow-x: auto;
+            white-space: pre;
+            line-height: 1.6;
+        }
+
+        .install-reqs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--borda);
+        }
+
+        .install-req {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--texto-muted);
+        }
+
+        .install-req svg {
+            width: 20px;
+            height: 20px;
+            color: var(--ambar);
+            flex-shrink: 0;
+        }
+
         /* ── CTA ──────────────────────────────────────── */
 
         .cta {
@@ -528,6 +610,7 @@
             margin: 2rem;
             border-radius: 20px;
             border: 1px solid var(--borda);
+            background: url('img/cta-bg.webp') center center / cover no-repeat;
         }
 
         .cta::before {
@@ -960,8 +1043,67 @@
     </div>
 </section>
 
+<!-- ── Instalação ─────────────────────────────── -->
+<section class="install" id="instalacao">
+    <div style="text-align: center; margin-bottom: 1rem;">
+        <div class="section-label">COMO INSTALAR</div>
+        <h2>Em 3 passos simples.</h2>
+        <p style="color: var(--texto-muted); max-width: 600px; margin: 0.5rem auto 0;">Tudo o que você precisa é de um computador com Docker instalado.</p>
+    </div>
+
+    <div class="install-steps">
+        <div class="install-step">
+            <div class="install-num">1</div>
+            <div class="install-step-body">
+                <h3>Instale o Docker</h3>
+                <p>Baixe e instale o Docker Desktop no seu computador. Funciona em Windows, Mac e Linux.</p>
+                <div class="install-code">https://www.docker.com/products/docker-desktop/</div>
+            </div>
+        </div>
+
+        <div class="install-step">
+            <div class="install-num">2</div>
+            <div class="install-step-body">
+                <h3>Clone o repositório</h3>
+                <p>Abra o terminal e execute o comando abaixo para baixar o projeto:</p>
+                <div class="install-code">git clone https://github.com/guedeseri-byte/protocolo-sentinela.git
+cd protocolo-sentinela</div>
+            </div>
+        </div>
+
+        <div class="install-step">
+            <div class="install-num">3</div>
+            <div class="install-step-body">
+                <h3>Inicie o sistema</h3>
+                <p>Execute o Docker Compose para subir todos os serviços automaticamente:</p>
+                <div class="install-code">docker compose up -d</div>
+                <p>Acesse <strong style="color: var(--ambar);">http://localhost</strong> no navegador. Pronto!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="install-reqs">
+        <div class="install-req">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Windows, Mac ou Linux
+        </div>
+        <div class="install-req">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12H2"/><path d="M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11z"/></svg>
+            8 GB RAM (mínimo)
+        </div>
+        <div class="install-req">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0022 16z"/></svg>
+            Docker Desktop instalado
+        </div>
+        <div class="install-req">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            Internet só para instalar
+        </div>
+    </div>
+</section>
+
 <!-- ── CTA ─────────────────────────────────────── -->
-<section class="cta" id="instalacao">
+<section class="cta">
     <div class="cta-mountains"></div>
     <div class="cta-inner">
         <div>
