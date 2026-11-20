@@ -130,8 +130,11 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
+            justify-content: center;
             padding: 7rem 2rem 4rem;
             overflow: hidden;
+            text-align: center;
+            background: url('img/hero-banner.webp') center center / cover no-repeat;
         }
 
         .hero::before {
@@ -139,51 +142,22 @@
             position: absolute;
             inset: 0;
             background:
-                linear-gradient(180deg, rgba(12,16,24,0) 0%, rgba(12,16,24,0.6) 40%, var(--fundo) 100%),
-                linear-gradient(135deg, rgba(49,91,76,0.3) 0%, transparent 40%),
-                linear-gradient(225deg, rgba(23,49,58,0.3) 0%, transparent 40%),
-                radial-gradient(ellipse at 30% 20%, rgba(49,91,76,0.2) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 30%, rgba(23,49,58,0.15) 0%, transparent 50%);
+                linear-gradient(180deg, rgba(12,16,24,0.5) 0%, rgba(12,16,24,0.65) 50%, var(--fundo) 100%),
+                radial-gradient(ellipse at 50% 40%, rgba(12,16,24,0.3) 0%, rgba(12,16,24,0.7) 100%);
             z-index: 0;
-        }
-
-        .hero-trees {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 400px;
-            background:
-                linear-gradient(180deg, rgba(15,30,20,0.9) 0%, rgba(12,16,24,0) 100%);
-            z-index: 0;
-            overflow: hidden;
-        }
-
-        .hero-trees::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 300px;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23142a1e'/%3E%3Cstop offset='1' stop-color='%230c1018' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 300 L0 180 Q100 120 200 160 Q300 80 400 140 Q500 60 600 120 Q700 50 800 100 Q900 40 1000 90 Q1100 60 1200 110 L1200 300Z' fill='url(%23g1)' opacity='0.6'/%3E%3Cpath d='M0 300 L0 220 Q150 160 300 200 Q450 130 600 180 Q750 120 900 170 Q1050 100 1200 160 L1200 300Z' fill='url(%23g1)' opacity='0.4'/%3E%3C/svg%3E") center bottom / cover no-repeat;
-            opacity: 0.7;
         }
 
         .hero-inner {
             position: relative;
             z-index: 1;
-            max-width: 1200px;
+            max-width: 700px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
             width: 100%;
         }
 
         .hero-content {
-            max-width: 540px;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         .hero-badge {
@@ -219,10 +193,20 @@
             line-height: 1.7;
         }
 
+        .hero-logo-big {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            margin: 0 auto 2rem;
+            display: block;
+            box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+        }
+
         .hero-buttons {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .btn {
@@ -254,168 +238,6 @@
         }
 
         .btn-outline:hover { border-color: var(--ambar); transform: translateY(-1px); }
-
-        /* ── Laptop mockup ────────────────────────────── */
-
-        .hero-mockup {
-            position: relative;
-            perspective: 1200px;
-        }
-
-        .laptop {
-            position: relative;
-            width: 100%;
-            max-width: 520px;
-            margin: 0 auto;
-            transform: rotateY(-5deg) rotateX(2deg);
-            transition: transform 0.4s ease;
-        }
-
-        .laptop:hover {
-            transform: rotateY(-2deg) rotateX(1deg);
-        }
-
-        .laptop-screen {
-            background: #1a1f2e;
-            border-radius: 12px 12px 0 0;
-            border: 2px solid #2d3545;
-            border-bottom: none;
-            padding: 8px 8px 0 8px;
-            box-shadow: 0 -4px 60px rgba(0,0,0,0.5);
-        }
-
-        .laptop-topbar {
-            display: flex;
-            align-items: center;
-            padding: 6px 8px;
-            gap: 6px;
-        }
-
-        .laptop-dot { width: 8px; height: 8px; border-radius: 50%; }
-        .laptop-dot-r { background: #ff5f57; }
-        .laptop-dot-y { background: #ffbd2e; }
-        .laptop-dot-g { background: #28c840; }
-
-        .laptop-url {
-            flex: 1;
-            margin-left: 8px;
-            padding: 3px 10px;
-            background: rgba(255,255,255,0.06);
-            border-radius: 4px;
-            font-size: 0.65rem;
-            color: var(--texto-muted);
-            font-family: monospace;
-        }
-
-        .laptop-viewport {
-            background: var(--fundo);
-            border-radius: 2px;
-            padding: 12px;
-            min-height: 240px;
-            overflow: hidden;
-        }
-
-        .mock-nav {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--borda);
-        }
-
-        .mock-logo {
-            width: 18px;
-            height: 18px;
-            border-radius: 4px;
-        }
-
-        .mock-nav-text {
-            font-size: 0.55rem;
-            font-weight: 800;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
-        .mock-nav-text span { color: var(--ambar); }
-
-        .mock-hero {
-            text-align: center;
-            padding: 8px 0;
-        }
-
-        .mock-hero-title {
-            font-size: 0.75rem;
-            font-weight: 900;
-            letter-spacing: 0.08em;
-            margin-bottom: 4px;
-        }
-
-        .mock-hero-title span { color: var(--ambar); }
-
-        .mock-hero-sub {
-            font-size: 0.5rem;
-            color: var(--texto-muted);
-            margin-bottom: 8px;
-        }
-
-        .mock-btns {
-            display: flex;
-            gap: 4px;
-            justify-content: center;
-        }
-
-        .mock-btn {
-            font-size: 0.45rem;
-            padding: 2px 8px;
-            border-radius: 3px;
-            font-weight: 700;
-        }
-
-        .mock-btn-p { background: var(--ambar); color: var(--fundo); }
-        .mock-btn-s { border: 1px solid var(--borda); color: var(--texto-muted); }
-
-        .mock-modules {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 4px;
-            margin-top: 10px;
-        }
-
-        .mock-mod {
-            background: var(--fundo-card);
-            border: 1px solid var(--borda);
-            border-radius: 4px;
-            padding: 6px 2px;
-            text-align: center;
-            font-size: 0.7rem;
-        }
-
-        .mock-mod-label {
-            font-size: 0.4rem;
-            font-weight: 700;
-            margin-top: 2px;
-            text-transform: uppercase;
-            letter-spacing: 0.03em;
-        }
-
-        .laptop-base {
-            background: linear-gradient(180deg, #2d3545, #252d38);
-            height: 14px;
-            border-radius: 0 0 4px 4px;
-            position: relative;
-        }
-
-        .laptop-base::after {
-            content: '';
-            position: absolute;
-            bottom: -6px;
-            left: 15%;
-            right: 15%;
-            height: 6px;
-            background: linear-gradient(180deg, #1e2530, #181e28);
-            border-radius: 0 0 8px 8px;
-        }
 
         /* ── Section common ───────────────────────────── */
 
@@ -480,7 +302,11 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 1.25rem;
-            font-size: 1.5rem;
+        }
+
+        .feature-icon-wrap svg {
+            width: 24px;
+            height: 24px;
         }
 
         .fi-blue { background: rgba(23, 49, 58, 0.5); border: 1px solid rgba(23, 49, 58, 0.8); }
@@ -892,9 +718,7 @@
         /* ── Responsive ───────────────────────────────── */
 
         @media (max-width: 1024px) {
-            .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
             .hero-content { max-width: 100%; }
-            .hero-mockup { display: none; }
             .hero h1 { font-size: 3rem; }
             .features-grid { grid-template-columns: repeat(2, 1fr); }
             .why-grid { grid-template-columns: repeat(2, 1fr); }
@@ -953,9 +777,9 @@
 
 <!-- ── Hero ─────────────────────────────────────── -->
 <section class="hero">
-    <div class="hero-trees"></div>
     <div class="hero-inner">
         <div class="hero-content">
+            <img src="https://raw.githubusercontent.com/guedeseri-byte/protocolo-sentinela/master/portal/static/img/logo.png" alt="Protocolo Sentinela" class="hero-logo-big">
             <div class="hero-badge">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
                 100% Offline · Código Aberto · Feito no Brasil
@@ -976,44 +800,6 @@
                 </a>
             </div>
         </div>
-
-        <div class="hero-mockup">
-            <div class="laptop">
-                <div class="laptop-screen">
-                    <div class="laptop-topbar">
-                        <div class="laptop-dot laptop-dot-r"></div>
-                        <div class="laptop-dot laptop-dot-y"></div>
-                        <div class="laptop-dot laptop-dot-g"></div>
-                        <div class="laptop-url">localhost/protocolo-sentinela</div>
-                    </div>
-                    <div class="laptop-viewport">
-                        <div class="mock-nav">
-                            <img src="https://raw.githubusercontent.com/guedeseri-byte/protocolo-sentinela/master/portal/static/img/logo.png" alt="" class="mock-logo">
-                            <span class="mock-nav-text">PROTOCOLO <span>SENTINELA</span></span>
-                        </div>
-                        <div class="mock-hero">
-                            <div class="mock-hero-title">PROTOCOLO <span>SENTINELA</span></div>
-                            <div class="mock-hero-sub">Preparação. Conhecimento. Autonomia.</div>
-                            <div class="mock-btns">
-                                <span class="mock-btn mock-btn-p">Instalar</span>
-                                <span class="mock-btn mock-btn-s">GitHub</span>
-                            </div>
-                        </div>
-                        <div class="mock-modules">
-                            <div class="mock-mod">🛡️<div class="mock-mod-label">PREP</div></div>
-                            <div class="mock-mod">💧<div class="mock-mod-label">ÁGUA</div></div>
-                            <div class="mock-mod">🏥<div class="mock-mod-label">SAÚDE</div></div>
-                            <div class="mock-mod">🤖<div class="mock-mod-label">IA</div></div>
-                            <div class="mock-mod">⚔️<div class="mock-mod-label">SOBR</div></div>
-                            <div class="mock-mod">🌾<div class="mock-mod-label">ALIM</div></div>
-                            <div class="mock-mod">⚡<div class="mock-mod-label">ENER</div></div>
-                            <div class="mock-mod">📡<div class="mock-mod-label">COMU</div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="laptop-base"></div>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -1025,32 +811,32 @@
 
     <div class="features-grid">
         <div class="feature-card">
-            <div class="feature-icon-wrap fi-blue">📚</div>
+            <div class="feature-icon-wrap fi-blue"><svg viewBox="0 0 24 24" fill="none" stroke="#8bb8cc" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="13" y2="11"/></svg></div>
             <h3>Biblioteca Offline</h3>
             <p>Wikipédia PT-BR, Wikibooks, Wikcionário e Projeto Gutenberg acessíveis via Kiwix. Milhões de artigos sem internet.</p>
         </div>
         <div class="feature-card">
-            <div class="feature-icon-wrap fi-green">🤖</div>
+            <div class="feature-icon-wrap fi-green"><svg viewBox="0 0 24 24" fill="none" stroke="#6db88a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v2H8V6a4 4 0 0 1 4-4z"/><rect x="4" y="8" width="16" height="12" rx="2"/><circle cx="9" cy="14" r="1.5" fill="#6db88a" stroke="none"/><circle cx="15" cy="14" r="1.5" fill="#6db88a" stroke="none"/><line x1="10" y1="18" x2="14" y2="18"/></svg></div>
             <h3>IA 100% Local</h3>
             <p>Ollama + Open WebUI com modelos PT-BR (Sabiá-3, Tucano). Faça perguntas e receba respostas com citações de documentos locais.</p>
         </div>
         <div class="feature-card">
-            <div class="feature-icon-wrap fi-amber">📋</div>
+            <div class="feature-icon-wrap fi-amber"><svg viewBox="0 0 24 24" fill="none" stroke="#D6A64F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="12" y2="18"/></svg></div>
             <h3>Central de Protocolos</h3>
             <p>Protocolos curados de Defesa Civil, Embrapa, SUS, Exército e Cruz Vermelha. Passo a passo para situações reais.</p>
         </div>
         <div class="feature-card">
-            <div class="feature-icon-wrap fi-red">🚨</div>
+            <div class="feature-icon-wrap fi-red"><svg viewBox="0 0 24 24" fill="none" stroke="#e57373" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><circle cx="12" cy="17" r="0.5" fill="#e57373"/></svg></div>
             <h3>Modo de Emergência</h3>
             <p>Interface de alto contraste com apenas protocolos críticos. Acesso direto a SAMU, Bombeiros e Defesa Civil.</p>
         </div>
         <div class="feature-card">
-            <div class="feature-icon-wrap fi-purple">🎓</div>
+            <div class="feature-icon-wrap fi-purple"><svg viewBox="0 0 24 24" fill="none" stroke="#a08cff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg></div>
             <h3>Educação Offline</h3>
             <p>Khan Academy PT-BR e CK-12 via Kolibri. Ciências, matemática e conhecimentos práticos para qualquer idade.</p>
         </div>
         <div class="feature-card">
-            <div class="feature-icon-wrap fi-teal">🧮</div>
+            <div class="feature-icon-wrap fi-teal"><svg viewBox="0 0 24 24" fill="none" stroke="#4db6ac" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/><line x1="14" y1="18" x2="16" y2="18"/></svg></div>
             <h3>Ferramentas Práticas</h3>
             <p>Calculadoras de água, alimentos e energia solar. Checklist de prontidão com avaliação de nível de preparação.</p>
         </div>
