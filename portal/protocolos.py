@@ -1,6 +1,11 @@
 import json
+import unicodedata
 from pathlib import Path
 from typing import Optional
+
+
+def _normalizar(texto: str) -> str:
+    return unicodedata.normalize("NFD", texto.lower()).encode("ascii", "ignore").decode()
 
 DATA_DIR = Path(__file__).parent / "data" / "protocolos"
 
@@ -71,12 +76,12 @@ def buscar_protocolos(
         resultados = [p for p in resultados if p.get("prioridade") == prioridade]
 
     if query:
-        q = query.lower()
+        q = _normalizar(query)
         resultados = [
             p for p in resultados
-            if q in p.get("titulo", "").lower()
-            or q in p.get("resumo", "").lower()
-            or q in " ".join(p.get("tags", [])).lower()
+            if q in _normalizar(p.get("titulo", ""))
+            or q in _normalizar(p.get("resumo", ""))
+            or q in _normalizar(" ".join(p.get("tags", [])))
         ]
 
     return resultados
