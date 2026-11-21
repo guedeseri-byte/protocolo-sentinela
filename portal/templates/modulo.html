@@ -5,7 +5,9 @@
 {% block content %}
 <section class="modulo-header" style="--mod-cor: {{ modulo.cor }}">
     <div class="modulo-header-inner">
-        <span class="modulo-header-icone">{{ modulo.icone }}</span>
+        <div class="modulo-header-icone-wrap">
+            {% if modulo.svg %}{{ modulo.svg | safe }}{% else %}<span class="modulo-header-icone">{{ modulo.icone }}</span>{% endif %}
+        </div>
         <div>
             <h2 class="modulo-header-titulo">{{ modulo.nome | upper }}</h2>
             <p class="modulo-header-desc">{{ modulo.desc }}</p>

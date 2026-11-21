@@ -1,17 +1,35 @@
 {% extends "base.html" %}
 
-{% block title %}Protocolo Sentinela — Início{% endblock %}
+{% block title %}Protocolo Sentinela — Inicio{% endblock %}
 
 {% block content %}
 <section class="hero">
     <div class="hero-inner">
         <img src="/static/img/logo.png" alt="Protocolo Sentinela" class="hero-logo">
         <h2 class="hero-title">PROTOCOLO<br><span class="hero-accent">SENTINELA</span></h2>
-        <p class="hero-tagline">Preparação. Conhecimento. Autonomia.</p>
+        <p class="hero-tagline">Preparacao. Conhecimento. Autonomia.</p>
         <p class="hero-desc">
-            Sistema offline de preparação, sobrevivência e continuidade operacional.
-            Conhecimento e ferramentas que permanecem disponíveis quando a conectividade falha.
+            Sistema offline de preparacao, sobrevivencia e continuidade operacional.
+            Conhecimento e ferramentas que permanecem disponiveis quando a conectividade falha.
         </p>
+        <div class="hero-badges">
+            <span class="hero-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10 15 15 0 014-10z"/></svg>
+                Offline-first
+            </span>
+            <span class="hero-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v5c0 5.25-3.5 10-8 11.5C7.5 21 4 16.25 4 11V6l8-4z"/></svg>
+                14 Modulos
+            </span>
+            <span class="hero-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 01-2 2h-4a2 2 0 01-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z"/><path d="M9 21h6"/></svg>
+                IA Local
+            </span>
+            <span class="hero-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+                Wikipedia PT-BR
+            </span>
+        </div>
     </div>
 </section>
 
@@ -27,50 +45,82 @@
 </section>
 
 <section class="modulos">
-    <h2 class="section-title">MÓDULOS</h2>
+    <h2 class="section-title">MODULOS</h2>
     <div class="modulos-grid">
         {% for mod in modulos %}
         <a href="/modulo/{{ mod.id }}" class="modulo-card" style="--mod-cor: {{ mod.cor }}">
-            <span class="modulo-icone">{{ mod.icone }}</span>
-            <h3 class="modulo-nome">{{ mod.nome }}</h3>
-            <p class="modulo-desc">{{ mod.desc }}</p>
+            <div class="modulo-icone-wrap">
+                {% if mod.svg %}
+                {{ mod.svg | safe }}
+                {% else %}
+                <span class="modulo-icone">{{ mod.icone }}</span>
+                {% endif %}
+            </div>
+            <div class="modulo-info">
+                <h3 class="modulo-nome">{{ mod.nome }}</h3>
+                <p class="modulo-desc">{{ mod.desc }}</p>
+            </div>
         </a>
         {% endfor %}
     </div>
 </section>
 
 <section class="acesso-rapido">
-    <h2 class="section-title">ACESSO RÁPIDO</h2>
+    <h2 class="section-title">ACESSO RAPIDO</h2>
     <div class="acesso-grid">
         <a href="/protocolos" class="acesso-btn">
-            <span class="acesso-icone">📋</span>
-            <span>Central de Protocolos</span>
-            <span class="acesso-sub">{{ total_protocolos }} protocolos curados</span>
+            <div class="acesso-icone-wrap">
+                {% if acesso_icons.protocolos %}{{ acesso_icons.protocolos | safe }}{% else %}<span class="acesso-icone">📋</span>{% endif %}
+            </div>
+            <div class="acesso-info">
+                <span class="acesso-info-title">Central de Protocolos</span>
+                <span class="acesso-sub">{{ total_protocolos }} protocolos curados</span>
+            </div>
         </a>
-        <a href="/emergencia" class="acesso-btn" style="border-color: var(--vermelho);">
-            <span class="acesso-icone">🚨</span>
-            <span>Modo Emergência</span>
-            <span class="acesso-sub">Protocolos críticos imediatos</span>
+        <a href="/emergencia" class="acesso-btn" style="--acesso-cor: var(--vermelho);">
+            <div class="acesso-icone-wrap" style="background: rgba(229,57,53,0.08); border-color: rgba(229,57,53,0.2); color: var(--vermelho);">
+                {% if acesso_icons.emergencia %}{{ acesso_icons.emergencia | safe }}{% else %}<span class="acesso-icone">🚨</span>{% endif %}
+            </div>
+            <div class="acesso-info">
+                <span class="acesso-info-title">Modo Emergencia</span>
+                <span class="acesso-sub">Protocolos criticos imediatos</span>
+            </div>
         </a>
         <a href="/biblioteca" class="acesso-btn">
-            <span class="acesso-icone">📚</span>
-            <span>Biblioteca Offline</span>
-            <span class="acesso-sub">Wikipedia, livros, manuais</span>
+            <div class="acesso-icone-wrap">
+                {% if acesso_icons.biblioteca %}{{ acesso_icons.biblioteca | safe }}{% else %}<span class="acesso-icone">📚</span>{% endif %}
+            </div>
+            <div class="acesso-info">
+                <span class="acesso-info-title">Biblioteca Offline</span>
+                <span class="acesso-sub">Wikipedia, livros, manuais</span>
+            </div>
         </a>
         <a href="/ia" class="acesso-btn">
-            <span class="acesso-icone">🤖</span>
-            <span>Assistente IA</span>
-            <span class="acesso-sub">Consulta com fontes locais</span>
+            <div class="acesso-icone-wrap">
+                {% if acesso_icons.ia %}{{ acesso_icons.ia | safe }}{% else %}<span class="acesso-icone">🤖</span>{% endif %}
+            </div>
+            <div class="acesso-info">
+                <span class="acesso-info-title">Assistente IA</span>
+                <span class="acesso-sub">Consulta com fontes locais</span>
+            </div>
         </a>
         <a href="/ferramentas" class="acesso-btn">
-            <span class="acesso-icone">🧮</span>
-            <span>Ferramentas</span>
-            <span class="acesso-sub">Calculadoras e checklists</span>
+            <div class="acesso-icone-wrap">
+                {% if acesso_icons.ferramentas %}{{ acesso_icons.ferramentas | safe }}{% else %}<span class="acesso-icone">🧮</span>{% endif %}
+            </div>
+            <div class="acesso-info">
+                <span class="acesso-info-title">Ferramentas</span>
+                <span class="acesso-sub">Calculadoras e checklists</span>
+            </div>
         </a>
         <a href="/educacao" class="acesso-btn">
-            <span class="acesso-icone">🎓</span>
-            <span>Educação</span>
-            <span class="acesso-sub">Khan Academy, cursos offline</span>
+            <div class="acesso-icone-wrap">
+                {% if acesso_icons.educacao %}{{ acesso_icons.educacao | safe }}{% else %}<span class="acesso-icone">🎓</span>{% endif %}
+            </div>
+            <div class="acesso-info">
+                <span class="acesso-info-title">Educacao</span>
+                <span class="acesso-sub">Khan Academy, cursos offline</span>
+            </div>
         </a>
     </div>
 </section>

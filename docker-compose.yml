@@ -18,10 +18,11 @@ services:
 
   # ── Kiwix — Biblioteca Offline (Wikipedia, Wikibooks, Gutenberg) ─
   kiwix:
-    image: ghcr.io/kiwix/kiwix-serve:3.7.0
+    image: ghcr.io/kiwix/kiwix-serve:3.8.2
     container_name: sentinela-kiwix
     restart: unless-stopped
-    command: /data/*.zim
+    entrypoint: ["kiwix-serve", "--port=8080", "--urlRootLocation=/biblioteca"]
+    command: ["/data/wikipedia_pt_all_mini_2026-05.zim"]
     volumes:
       - kiwix-data:/data
     networks:
@@ -71,6 +72,8 @@ services:
     image: ghcr.io/open-webui/open-webui:v0.6.5
     container_name: sentinela-openwebui
     restart: unless-stopped
+    ports:
+      - "${SENTINELA_PORT_IA:-3000}:8080"
     environment:
       - OLLAMA_BASE_URL=http://ollama:11434
       - WEBUI_AUTH=false

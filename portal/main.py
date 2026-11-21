@@ -12,6 +12,7 @@ from protocolos import (
     CATEGORIAS, NIVEIS, PRIORIDADES,
     carregar_protocolos, buscar_protocolos, obter_protocolo, contar_por_categoria,
 )
+from icons import SVG_ICONS, ACESSO_ICONS
 
 app = FastAPI(
     title="Protocolo Sentinela",
@@ -43,6 +44,9 @@ MODULOS = [
     {"id": "logistica", "icone": "📦", "nome": "Logística", "desc": "Inventário, validade e autonomia", "cor": "#FF5722", "categoria": "LOGI"},
     {"id": "tecnologia", "icone": "🤖", "nome": "Tecnologia e IA", "desc": "IA offline, RAG, busca e assistente local", "cor": "#17313A", "categoria": "TECH"},
 ]
+
+for mod in MODULOS:
+    mod["svg"] = SVG_ICONS.get(mod["id"], "")
 
 SERVICOS_EXTERNOS = {
     "biblioteca": {"nome": "Biblioteca (Kiwix)", "url": KIWIX_URL, "path": "/biblioteca"},
@@ -77,6 +81,7 @@ async def home(request: Request):
         "version": app.version,
         "total_protocolos": total_protocolos,
         "contagem": contagem,
+        "acesso_icons": ACESSO_ICONS,
     })
 
 
