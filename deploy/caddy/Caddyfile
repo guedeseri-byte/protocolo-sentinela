@@ -20,13 +20,9 @@
 		reverse_proxy ollama:11434
 	}
 
-	# Kolibri — Educação
-	redir /educacao /educacao/ permanent
-
-	handle /educacao/* {
-		uri strip_prefix /educacao
-		reverse_proxy kolibri:8080
-	}
+	# Kolibri — Educação (subpath não funciona, acessível na porta 3001)
+	redir /educacao http://{host}:3001 temporary
+	redir /educacao/ http://{host}:3001 temporary
 
 	# Portal principal (fallback)
 	reverse_proxy portal:8000

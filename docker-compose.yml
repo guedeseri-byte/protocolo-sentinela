@@ -93,13 +93,15 @@ services:
 
   # ── Kolibri — Educação Offline ────────────────────────────────
   kolibri:
-    image: learningequality/kolibri:0.16.2
+    image: learningequality/kolibri:0.19.5
     container_name: sentinela-kolibri
     restart: unless-stopped
+    ports:
+      - "${SENTINELA_PORT_EDU:-3001}:8080"
     environment:
       - KOLIBRI_LISTEN_PORT=8080
     volumes:
-      - kolibri-data:/root/.kolibri
+      - kolibri-data:/kolibri
     networks:
       - sentinela
     profiles:
