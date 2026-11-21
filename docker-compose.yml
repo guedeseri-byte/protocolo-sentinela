@@ -53,6 +53,10 @@ services:
     image: ollama/ollama:0.6.2
     container_name: sentinela-ollama
     restart: unless-stopped
+    environment:
+      - OLLAMA_NUM_PARALLEL=1
+      - OLLAMA_MAX_LOADED_MODELS=1
+      - OLLAMA_RUNNERS_DIR=/usr/lib/ollama/runners
     volumes:
       - ollama-data:/root/.ollama
     networks:
